@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newstyle.css">
+    <script src="script.js" defer></script> <!-- Defer script execution until after the document is parsed -->
+    <script src="validate.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Recipe Vault</h1>
+        </div>
+        <nav class="tabs">
+            <a href="#home">Home</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <button id="toggleButton">Dark Theme</button>
+    <main>
+        <section id="home">
+            <article>
+                <h2>Welcome to Recipe Vault!</h2>
+                <p>Explore a world of delicious recipes and culinary inspiration.</p>
+            </article>
+            <article>
+                <h2>Watch One Of Our Favorite Recipes!</h2>
+                <p>You can probably try this at home!</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PSOhHPRYU4E" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+
+        <section id="recipes">
+            <article>
+                <h2>Recipe Categories</h2>
+                <ul>
+                    <li><a href="#appetizers">Appetizers</a></li>
+                    <li><a href="#main-courses">Main Courses</a></li>
+                    <li><a href="#desserts">Desserts</a></li>
+                </ul>
+            </article>
+            <article>
+                <h2>Featured Recipes</h2>
+                <div class="recipe-list-container">
+                    <div class="recipe-card">
+                        <!-- <img src="images/recipe1.jpg" alt="Spaghetti Carbonara"> -->
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>A classic Italian pasta dish with creamy sauce and crispy bacon.</p>
+                        <a href="recipe1.html">View Recipe</a>
+                    </div>
+                    <div class="recipe-card">
+                        <!-- <img src="images/recipe2.jpg" alt="Chicken Parmesan"> -->
+                        <h3>Chicken Parmesan</h3>
+                        <p>Delicious breaded chicken topped with marinara sauce and melted cheese.</p>
+                        <a href="recipe2.html">View Recipe</a>
+                    </div>
+                    <div class="recipe-card">
+                        <!-- <img src="images/recipe3.jpg" alt="Chocolate Cake"> -->
+                        <h3>Chocolate Cake</h3>
+                        <p>Indulgent and moist chocolate cake topped with creamy frosting.</p>
+                        <a href="recipe3.html">View Recipe</a>
+                    </div>
+                </div>
+                <!-- Recipe cards go here -->
+                </div>
+            </article>
+        </section>
+
+        <section id="about">
+            <article>
+                <h2>About Recipe Vault</h2>
+                <p>Welcome to The Recipe Vault, your go-to destination for delicious recipes, culinary inspiration,
+                    and cooking adventures!</p>
+                <h3>Our Mission</h3>
+                <p>At The Recipe Vault, our mission is to bring people together through the joy of cooking and
+                    sharing good food. Whether you're a seasoned chef or a novice in the kitchen, we aim to provide you
+                    with easy-to-follow recipes, helpful cooking tips, and mouthwatering dishes that will delight your
+                    taste buds.</p>
+                <h3>Our Story</h3>
+                <p>The Recipe Vault was born out of a passion for cooking and a desire to share
+                    delicious recipes with others. Our founder, has always had a love for food and
+                    cooking, and wanted to create a space where food enthusiasts of all levels could come together to
+                    explore, learn, and connect over their shared love of cooking.</p>
+                <h3>Contact Us</h3>
+                <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you! Fill out the form
+                    below, and we'll get back to you as soon as possible.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <article>
+                <h2>Contact Us</h2>
+                <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you! Fill out the form
+                    below, and we'll get back to you as soon as possible.</p>
+
+                <button id="openFormButton">Register</button>
+
+                <!-- Visitor registration form (hidden by default) -->
+                <div id="visitor-formContainer" class="hidden">
+                    <form id="visitor-form" action="#" method="post">
+                        <!-- Personal information section -->
+                        <div>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <div class="error-message" id="lastNameError"></div>
+                        </div>
+
+                        <!-- Contact details section -->
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" checkRequired>
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+
+                        <!-- How they found the page -->
+                        <div>
+                            <label for="how-find">How did you find our page?</label>
+                            <select id="how-find" name="how-find" required>
+                                <option value="">Please select one</option>
+                                <option value="google">Google</option>
+                                <option value="face">Facebook</option>
+                                <option value="tiktok">Tiktok</option>
+                                <option value="friend">Friend</option>
+                                <option value="school">School Website</option>
+
+                            </select>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" id="submitBtn">Submit</button>
+
+                        <div id="thank-you-message" style="display: none;">
+                            <p>Thank you for your submission!</p>
+                        </div>
+
+                    </form>
+                </div>
+            </article>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <article>
+            <p>© 2024 Recipe Vault. All rights reserved. | Designed by Andrea Pinto</p>
+        </article>
+    </footer>
+</body>
+
+</html>
