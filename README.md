@@ -1,4 +1,5 @@
-Welcome to my personal Git repository! 
+Welcome to my personal Git repository!
+
 This repository contains a collection of programming projects and files showcasing my work in various programming languages, including C++, Python, HTML, and JavaScript.
 
 To run the programs in this repository, you will need the following software installed on your machine:
